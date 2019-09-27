@@ -1,0 +1,86 @@
+@import 'variable';
+
+.account-page {
+  height: 100vh;
+  width: 100vw;
+  padding-top: 60px;
+  background-color: #222222;
+
+    &__header {
+      margin-bottom: 10px;
+      text-align: center;
+      h2 {
+        letter-spacing: 1px;
+        font-size: 40px;
+        color: $yellow;
+      }
+      h5 {
+        margin-top:30px;
+        letter-spacing: 1px;
+        font-size: 12px;
+        color: white;
+      }
+      .btn {
+        display: inline-block;
+        height: 50px;
+        padding: 0 30px;
+        line-height: 50px;
+        letter-spacing: 1px;
+        text-align: center;
+        border-radius: 5px;
+        text-decoration: none;
+        margin-top: 20px;
+        color: white;
+        background-color: $green;
+      }
+
+  }
+    &__main{
+      margin-top: 30px;
+      .field {
+        margin-bottom: 10px;
+        text-align: center;
+
+        .field-label {
+          padding: 5px 0;
+          letter-spacing: 1px;
+          font-size: 20px;
+          color: white;
+
+          i {
+            font-size: 12px;
+          }
+        }
+
+        .field-input {
+          display:block;
+          margin: 0 auto;
+          input {
+            width: 60%;
+            padding: 10px;
+            letter-spacing: 1px;
+          }
+        }
+      }
+
+      .actions{
+        .btn {
+          display: block;
+          margin: 0 auto;
+          height: 50px;
+          padding: 0 30px;
+          line-height: 50px;
+          letter-spacing: 1px;
+          text-align: center;
+          border: none;
+          border-radius: 5px;
+        }
+  
+        input[type='submit'] {
+          margin-top: 20px;
+          color: white;
+          background-color: $green;
+        }
+      }
+  }
+}

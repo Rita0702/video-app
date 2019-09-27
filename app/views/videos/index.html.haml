@@ -1,0 +1,18 @@
+.top-page
+  = render 'header'
+  
+  .main
+    .main-top 
+      .main-top__title
+        = @video.title
+        = link_to image_tag(image_for_video_path(@video.id), alt: @video.title, class: 'main-top__image'), video_path(@video.id)
+               
+    .main-contents
+      %ul.main-card
+        %li.main-card__list
+          - @videos.each do |video|
+            = link_to image_tag(image_for_video_path(video.id), class: 'main-card__list--image'), video_path(video.id)
+            -# .main-card__list--title
+            -#   = video.title
+
+    = render 'footer'
