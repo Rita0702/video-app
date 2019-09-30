@@ -1,15 +1,27 @@
 Rails.application.routes.draw do
   devise_for :users
   root "videos#index"
-
+  
   resources :users, only: [:show, :edit, :update]
+  resources :videos, only: [:index, :show] do
+    resources :talks, only: [:index, :create]  
+    namespace :api do
+      resources :talks, only: :index, defaults: { format: 'json' }
+    end
+  end
+
   resources :videos, only: [:index, :show] do
     member do
       get 'image_for'
     end
   end
-  #   resources :talks, only: [:create]
+
+  # resources :videos, only: [:index, :show] do
+  #   member do
+  #     get 'video_for'
+  #   end
   # end
+    
   resources :posts, only: [:index, :show] do
     resources :comments, only: [:create]
   end

@@ -7,3 +7,5 @@
       = fa_icon 'user', class: 'icon'
     %li
       = fa_icon 'search', class: 'icon'
+    = link_to "ログアウト", destroy_user_session_path, method: :delete
+    = link_to "トップページ", root_path, method: :get
