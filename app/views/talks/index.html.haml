@@ -1,0 +1,48 @@
+.show-page
+  = render '/videos/header'
+
+  .main
+    .main-title
+      = @video.title
+
+    .main-top
+      .main-video
+        - if @video.id == 1
+          = video_tag 'kimetu.mp4', type: "videos/mp4", controls: true, autoplay: false, muted: true, class: 'video-view'
+        - elsif @video.id == 2
+          = video_tag 'chihaya.mp4', type: "videos/mp4", controls: true, autoplay: false, muted: true, class: 'video-view'
+        - elsif @video.id == 3
+          = video_tag 'kimiuso.mp4', type: "videos/mp4", controls: true, autoplay: false, muted: true, class: 'video-view'
+        - elsif @video.id == 4
+          = video_tag 'bakemono.mp4', type: "videos/mp4", controls: true, autoplay: false, muted: true, class: 'video-view'
+        - elsif @video.id == 5
+          = video_tag 'blacklagoon.mp4', type: "videos/mp4", controls: true, autoplay: false, muted: true, class: 'video-view'
+        - elsif @video.id == 6
+          = video_tag 'eureka.mp4', type: "videos/mp4", controls: true, autoplay: false, muted: true, class: 'video-view'
+        - elsif @video.id == 7
+          = video_tag 'fatest2.mp4', type: "videos/mp4", controls: true, autoplay: false, muted: true, class: 'video-view'
+        
+      .main-comments
+        .form
+          = form_for [@video, @talk] do |f|
+            = f.text_field :comment, placeholder: 'type a commment', class: 'form-textarea'
+            = f.submit 'send', class: 'form-submit'
+       
+        .comment-area
+          .comments
+            -@talks.each do |talk|
+              .comment{data: {talk: { id: talk.id }}}
+                .comment__name
+                  = talk.user.name
+                .comment__text
+                  = talk.comment
+          
+    %ul.main-icon-list
+      %li
+        = fa_icon 'plus-circle', class: 'icon'
+        %i マイビデオ
+      %li
+        = fa_icon 'twitter', class: 'icon'
+        %i Twitter
+
+    = render 'videos/footer'
