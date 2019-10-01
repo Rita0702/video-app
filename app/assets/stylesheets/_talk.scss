@@ -9,7 +9,7 @@
     background-color: #222222;
     overflow: scroll;
     position: absolute;
-    top: 150px;
+    top: 120px;
     box-sizing: border-box;
 
     .main-title{
@@ -25,6 +25,7 @@
         height: 500px;
         width: 700px;
         margin: 0 20px;
+        margin-bottom: 20px;
 
           .video-view{
             height: 500px;
@@ -37,6 +38,7 @@
         width: 500px;
         margin: 0 20px;
         background-color: #444444;
+        margin-bottom: 20px;
 
         form {
           display: flex;
@@ -81,21 +83,22 @@
         }
       }
     
-      .main-icon-list{
-        display: flex;
-        padding: 0 20px 0 20px;
-        margin-bottom: 30px;
+      // .main-icon-list{
+      //   display: flex;
+      //   padding: 0 20px 0 20px;
+      //   margin-bottom: 30px;
 
-        .icon{
-          color: white;
-          font-size: 50px;
-          padding-top: 30px;
-          padding-left: 30px;
-        }
-        i {
-          color: white;
-        }
-      }
+      //   .icon{
+      //     color: white;
+      //     font-size: 50px;
+      //     padding-top: 30px;
+      //     padding-left: 30px;
+      //   }
+      //   i {
+      //     color: white;
+      //   }
+      // }
+
     }
   }
 }

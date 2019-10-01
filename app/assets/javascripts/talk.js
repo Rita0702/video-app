@@ -12,8 +12,9 @@ $(function(){
                    </div>`
     return comment;
   }
+
   function scroll(){
-    $('.comments').animate({scrollTop: $('.comments')[0].scrollHeight}, 1);
+    $('.comment-area').animate({scrollTop: $('.comment-area')[0].scrollHeight });
   }
 
   function rightbottommove(){
@@ -156,9 +157,8 @@ $(function(){
       // whitemove();
       
       $('span:last').fadeOut();
-
-      $('.form-submit').prop('disabled', false);
       scroll();
+      $('.form-submit').prop('disabled', false);
       $('#new_talk')[0].reset();
     })
     .fail(function(){
