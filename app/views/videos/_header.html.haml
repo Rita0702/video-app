@@ -1,11 +1,16 @@
 .header
   %ul.header-list
-    %li.title video-app
+    %li.title 
+      = link_to 'video-app', videos_path
     %li
-      = fa_icon 'film', class: 'icon'
+      = link_to video_talks_path(1) do
+        = fa_icon 'film', class: 'icon'
+    %li
+      = link_to posts_path do
+        = fa_icon 'comments', class: 'icon'
     %li
       = fa_icon 'user', class: 'icon'
     %li
-      = fa_icon 'search', class: 'icon'
-    = link_to "ログアウト", destroy_user_session_path, method: :delete
-    = link_to "トップページ", root_path, method: :get
+      = link_to destroy_user_session_path, method: :delete do
+        = fa_icon 'cog', class: 'icon'
+  

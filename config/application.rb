@@ -8,6 +8,9 @@ Bundler.require(*Rails.groups)
 
 module VideoApp
   class Application < Rails::Application
+    config.time_zone = 'Asia/Tokyo'
+    config.active_record.default_timezone = :local
+
     config.generators do |g|
       g.stylesheets false
       g.javascripts false

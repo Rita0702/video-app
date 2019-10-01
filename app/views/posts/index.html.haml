@@ -1,0 +1,60 @@
+.post-page
+  = render '/videos/header'
+
+  .main
+    .main-title
+      ゴミ捨て場
+
+    .main-top
+      .main-left
+        .form
+          = form_for [@post] do |f|
+            = f.text_field :title, placeholder: 'type a title', class: 'form-title'
+            = f.text_area :text, placeholder: 'type a commment', class: 'form-textarea'
+            = f.file_field :image, class: 'form-filefield'
+            = f.submit 'send', class: 'form-submit'
+
+        .good-ranking
+          .good-content
+            .post-box
+              .post-top
+                .post-user
+                  hanako
+                .post-title
+                  hello
+                .post-date
+                  2019-11-11
+                .good-button
+                  ❤️
+                .good-count
+                  10
+              .post-bottom
+                .post-text
+                  はろはろ
+                .post-image
+                  = image_tag 'fate.jpg', type: "images/jpg", size: '250x200'
+
+      .main-right
+        .posts-content
+          - @posts.each do |post|
+            .post-box
+              .post-top
+                .post-user
+                  = post.user.name
+                .post-title
+                  = post.title
+                .post-date
+                  = post.created_at.strftime("%Y/%m/%d %H:%M")
+                .good-button
+                  ❤️
+                .good-count
+                  10
+              .post-bottom
+                - if post.text.present?
+                  .post-text
+                    = post.text
+                - if post.image.present?
+                  .post-image
+                    = image_tag post.image.url
+
+    = render 'videos/footer'
