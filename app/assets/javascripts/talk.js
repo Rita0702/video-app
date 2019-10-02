@@ -185,9 +185,37 @@ $(function(){
           insertHTML += buildHTML(talk);
           $('.comments').append(insertHTML);
           scroll();
-          // insertHTML += rollcomment(talk);
-          // $('.comments').append(insertHTML);
-          // scroll();
+          insertHTML += rollcomment(talk);
+          $('.comments').append(insertHTML);
+
+          $('.video_top').css('position', 'relative');
+          $('span:last').css({ 'color':'white','font-size':'30px', 
+                           'position': 'absolute',
+                           'top': '70px',
+                           'left': '0px'                    
+                        });
+
+          var number = 1 + Math.floor(Math.random() * 12);
+          console.log(number);
+    
+          $(function(){
+            switch(number){
+                case number = 1 : randomColor($('span:last'),true); break;
+                case number = 2 : rightbottommove(); break;
+                case number = 3 : bottommove(); break;
+                case number = 4 : rightmove(); break;
+                case number = 5 : topreturnmove(); break;
+                case number = 6 : bottomreturnmove(); break;
+                case number = 7 : centermove(); break;
+                case number = 8 : redmove(); break;
+                case number = 9 : greenmove(); break;
+                case number = 10 : yellowmove(); break;
+                case number = 11 : bluemove(); break;
+                case number = 12 : whitemove(); break;
+            }
+          });
+          $('span:last').fadeOut();
+
         })
       })
       .fail(function(){
@@ -195,6 +223,6 @@ $(function(){
       });
     };
   }
-  setInterval(moveComments, 5000);
+  setInterval(moveComments, 1000);
 });
 

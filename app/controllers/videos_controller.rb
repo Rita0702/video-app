@@ -6,10 +6,10 @@ class VideosController < ApplicationController
     # @videos = Video.order("id ASC").limit(5)
   end
 
-  def show
-    @video = Video.find(params[:id])
-    @video = Video.new
-  end
+  # def show
+  #   @video = Video.find(params[:id])
+  #   @video = Video.new
+  # end
 
   def image_for
     @videos = Video.find(params[:id])
