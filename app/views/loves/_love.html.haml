@@ -1,0 +1,10 @@
+.good-button
+  - if Love.find_by(user_id: current_user.id, post_id: post.id)
+    = link_to post_loves_path(post.id), method: :delete, remote: true do
+      = fa_icon 'heart', class: 'icon-red'
+      削除
+  - else
+    = link_to post_loves_path(post.id), method: :post, remote: true do
+      = fa_icon 'heart', class: 'icon'
+.good-count
+  = Love.where(post_id: post.id).count

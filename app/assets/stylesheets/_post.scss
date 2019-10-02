@@ -70,30 +70,43 @@
                   display: flex;
                   padding-top: 5px;
                   padding-left: 5px;
+                  height: 70px;
+                  line-height: 70px;
       
                   .post-user{
                     color: white;
                     font-size: 15px;
                   }
                   .post-title{
-                    color: white;
+                    color: $yellow;
                     font-size: 15px;
-                    padding-left: 5px;
+                    padding-left: 10px;
                   }
                   .post-date{
                     color: white;
                     font-size: 15px;
-                    padding-left: 5px;
+                    padding-left: 10px;
                   }
-                  .good-button{
-                    color: white;
-                    font-size: 15px;
-                    padding-left: 5px;
-                  }
-                  .good-count{
-                    color: $yellow;
-                    font-size: 15px;
-                    padding-left: 5px;
+                  #love-post{
+                    display: flex;
+                    .good-button{
+                      .icon {
+                        color: white;
+                        font-size: 50px;
+                        padding-left: 20px;
+                      }
+                      .icon-red {
+                        color: red;
+                        font-size: 50px;
+                        padding-left: 20px;
+                      }
+                    }
+                    .good-count{
+                      color: $yellow;
+                      font-size: 15px;
+                      padding-left: 20px;
+                      display: inline;
+                    }
                   }
                 }
       
@@ -138,30 +151,43 @@
               display: flex;
               padding-top: 5px;
               padding-left: 5px;
+              height: 70px;
+              line-height: 70px;
   
               .post-user{
                 color: white;
                 font-size: 15px;
               }
               .post-title{
-                color: white;
+                color: $yellow;
                 font-size: 15px;
-                padding-left: 5px;
+                padding-left: 10px;
               }
               .post-date{
                 color: white;
                 font-size: 15px;
-                padding-left: 5px;
+                padding-left: 10px;
               }
-              .good-button{
-                color: white;
-                font-size: 15px;
-                padding-left: 5px;
-              }
-              .good-count{
-                color: $yellow;
-                font-size: 15px;
-                padding-left: 5px;
+              #love-post{
+                display: flex;
+                .good-button{
+                  .icon {
+                    color: white;
+                    font-size: 50px;
+                    padding-left: 20px;
+                  }
+                  .icon-red {
+                    color: red;
+                    font-size: 50px;
+                    padding-left: 20px;
+                  }
+                }
+                .good-count{
+                  color: $yellow;
+                  font-size: 15px;
+                  padding-left: 20px;
+                  display: inline;
+                }
               }
             }
   

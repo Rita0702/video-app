@@ -6,4 +6,5 @@ class User < ApplicationRecord
 
   has_many :talks
   has_many :posts
+  has_many :loves, dependent: :destroy
 end
