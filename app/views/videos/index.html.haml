@@ -1,12 +1,14 @@
 .top-page
   = render 'header'
-  
+
   .main
+    .breadcrumbs
+      = link_to 'TopPage', root_path
     .main-top 
       .main-top__title
         = @video.title
         = link_to image_tag(image_for_video_path(@video.id), alt: @video.title, class: 'main-top__image'), video_talks_path(@video.id)
-        -# = video_tag video_for_video_path(), type: "mp4", controls: true, autoplay: false, muted: true, class: ''
+        -# = video_tag 'kimetu.mp4', type: "videos/mp4", controls: true, autoplay: false, muted: true, class: 'video-view'
       
     .main-contents
       %ul.main-card

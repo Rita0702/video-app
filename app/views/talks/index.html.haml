@@ -2,6 +2,10 @@
   = render '/videos/header'
 
   .main
+    .breadcrumbs
+      = link_to 'TopPage', root_path
+      >>
+      = link_to 'view&talk', video_talks_path(@video)
     .main-title
       = @video.title
 

@@ -2,6 +2,11 @@
   = render '/videos/header'
 
   .main
+    .breadcrumbs
+      = link_to 'TopPage', root_path
+      >>
+      = link_to 'post', posts_path
+
     .main-title
       ゴミ捨て場
     
@@ -11,28 +16,45 @@
           = form_for [@post] do |f|
             = f.text_field :title, placeholder: 'type a title', class: 'form-title'
             = f.text_area :text, placeholder: 'type a commment', class: 'form-textarea'
-            = f.file_field :image, class: 'form-filefield'
+            = f.label :image, class: 'file-icon' do
+              = fa_icon 'image'
+              = f.file_field :image, class: 'form-filefield'
+            .preview
             = f.submit 'send', class: 'form-submit'
 
+        -# .form
+        -#   = form_for [@post], html: {id: '#new_post', action:'/posts', multipart: true, class: "dropzone"} do |f|
+        -#     = f.file_field :image, class: 'form-filefield', multiple: true
+        -#     = f.submit 'send', class: 'form-submit'
+
+
         .good-ranking
+          .ranking
+            topranker
           .good-content
-            .post-box
-              .post-top
-                .post-user
-                  hanako
-                .post-title
-                  hello
-                .post-date
-                  2019-11-11
-                .good-button
-                  ❤️
-                .good-count
-                  10
-              .post-bottom
-                .post-text
-                  はろはろ
-                .post-image
-                  = image_tag 'fate.jpg', type: "images/jpg", size: '250x200'
+            -@love_count_post.each.with_index do |post, i|
+              .post-box
+                .rank
+                  = i+1
+                  位
+                .count
+                  いいね
+                  = fa_icon 'heart', class: 'icon-red'
+                  = @love_count[i]
+                .post-top
+                  .post-user
+                    = post.user.name
+                  .post-title
+                    = post.title
+                  .post-date
+                    = post.created_at.strftime("%Y/%m/%d %H:%M")
+                .post-bottom
+                  - if post.text.present?
+                    .post-text
+                      = post.text
+                  - if post.image.present?
+                    .post-image
+                      = image_tag post.image.url
 
       .main-right
         .posts-content
@@ -56,4 +78,3 @@
                     = image_tag post.image.url
 
     = render 'videos/footer'
-
