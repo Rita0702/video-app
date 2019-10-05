@@ -246,17 +246,17 @@ $(function(){
             case number = 11 : bluemove(); break;
             case number = 12 : whitemove(); break;
 
-            case number = 13 : rightbottommove(); break;
-            case number = 14 : bottommove(); break;
-            case number = 15 : rightmove(); break;
-            case number = 16 : topreturnmove(); break;
-            case number = 17 : bottomreturnmove(); break;
-            case number = 18 : centermove(); break;
-            case number = 19 : redmove(); break;
-            case number = 20 : greenmove(); break;
-            case number = 21 : yellowmove(); break;
-            case number = 22 : bluemove(); break;
-            case number = 23 : whitemove(); break;
+            case number = 13 : rightbottommove2(); break;
+            case number = 14 : bottommove2(); break;
+            case number = 15 : rightmove2(); break;
+            case number = 16 : topreturnmove2(); break;
+            case number = 17 : bottomreturnmove2(); break;
+            case number = 18 : centermove2(); break;
+            case number = 19 : redmove2(); break;
+            case number = 20 : greenmove2(); break;
+            case number = 21 : yellowmove2(); break;
+            case number = 22 : bluemove2(); break;
+            case number = 23 : whitemove2(); break;
         }
       });
 
@@ -344,17 +344,17 @@ $(function(){
                 case number = 11 : bluemove(); break;
                 case number = 12 : whitemove(); break;
 
-                case number = 13 : rightbottommove(); break;
-                case number = 14 : bottommove(); break;
-                case number = 15 : rightmove(); break;
-                case number = 16 : topreturnmove(); break;
-                case number = 17 : bottomreturnmove(); break;
-                case number = 18 : centermove(); break;
-                case number = 19 : redmove(); break;
-                case number = 20 : greenmove(); break;
-                case number = 21 : yellowmove(); break;
-                case number = 22 : bluemove(); break;
-                case number = 23 : whitemove(); break;
+                case number = 13 : rightbottommove2(); break;
+                case number = 14 : bottommove2(); break;
+                case number = 15 : rightmove2(); break;
+                case number = 16 : topreturnmove2(); break;
+                case number = 17 : bottomreturnmove2(); break;
+                case number = 18 : centermove2(); break;
+                case number = 19 : redmove2(); break;
+                case number = 20 : greenmove2(); break;
+                case number = 21 : yellowmove2(); break;
+                case number = 22 : bluemove2(); break;
+                case number = 23 : whitemove2(); break;
             }
           });
 
