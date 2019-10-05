@@ -24,15 +24,15 @@ $(function(){
     $('span:last').animate({ left:'0', top:'500'}, 3000);
   }
   function rightmove(){
-    $('span:last').animate({ left:'600', top:'70'}, 4000, 'linear');
+    $('span:last').animate({ left:'600', top:'120'}, 4000, 'linear');
   }
   function topreturnmove(){
-    $('span:last').animate({ left:'600', top:'70'}, 2000);
-    $('span:last').animate({ left:'0', top:'70'}, 1000);
+    $('span:last').animate({ left:'600', top:'120'}, 2000);
+    $('span:last').animate({ left:'0', top:'120'}, 1000);
   }
   function bottomreturnmove(){
     $('span:last').animate({ left:'0', top:'500'}, 1000, 'linear');
-    $('span:last').animate({ left:'0', top:'70'}, 3000, 'linear');
+    $('span:last').animate({ left:'0', top:'120'}, 3000, 'linear');
   }
   function centermove(){
     $('span:last').animate({ left:'300', top:'250'}, 7000, 'linear');
@@ -47,12 +47,12 @@ $(function(){
   function greenmove(){
     $('span:last').css('color','green');
     $('span:last').animate({ left:'0', top:'500'}, 1000, 'linear');
-    $('span:last').animate({ left:'0', top:'70'}, 3000, 'linear');
+    $('span:last').animate({ left:'0', top:'120'}, 3000, 'linear');
   }
   function yellowmove(){
     $('span:last').css('color','yellow');
-    $('span:last').animate({ left:'600', top:'70'}, 2000);
-    $('span:last').animate({ left:'0', top:'70'}, 1000);
+    $('span:last').animate({ left:'600', top:'120'}, 2000);
+    $('span:last').animate({ left:'0', top:'12'}, 1000);
   }
   function bluemove(){
     $('span:last').css('color','blue');
@@ -61,6 +61,112 @@ $(function(){
   function whitemove(){
     $('span:last').css('color','white');
     $('span:last').animate({ left:'300', top:'250'}, 7000, 'linear'); 
+  }
+
+
+  function rightbottommove2(){
+    $('span:last').fadeIn();
+    $('span:last').css({ 'color':'white','font-size':'30px', 
+                         'position': 'absolute',
+                         'top': '500px',
+                         'left': '600px'                    
+                        });
+    $('span:last').animate({ left:'0', top:'120'}, 1000, 'linear');
+  }
+  function bottommove2(){
+
+    $('span:last').css({ 'color':'white','font-size':'30px', 
+                         'position': 'absolute',
+                         'top': '500px',
+                         'left': '0px'                    
+                        });
+    $('span:last').animate({ left:'0', top:'120'}, 3000);
+  }
+  function rightmove2(){
+
+    $('span:last').css({ 'color':'white','font-size':'30px', 
+                         'position': 'absolute',
+                         'top': '120px',
+                         'left': '600px'                 
+                        });
+    $('span:last').animate({ left:'0', top:'120'}, 4000, 'linear');
+  }
+  function topreturnmove2(){
+
+    $('span:last').css({ 'color':'white','font-size':'30px', 
+                         'position': 'absolute',
+                         'top': '120px',
+                         'left': '600px'                    
+                        });
+    $('span:last').animate({ left:'0', top:'120'}, 2000);
+    $('span:last').animate({ left:'600', top:'120'}, 1000);
+  }
+  function bottomreturnmove2(){
+
+    $('span:last').css({ 'color':'white','font-size':'30px', 
+                         'position': 'absolute',
+                         'top': '500px',
+                         'left': '0px'                    
+                        });
+    $('span:last').animate({ left:'0', top:'120'}, 1000, 'linear');
+    $('span:last').animate({ left:'0', top:'500'}, 3000, 'linear');
+  }
+  function centermove2(){
+    $('span:last').fadeIn();
+    $('span:last').css({ 'color':'white','font-size':'30px', 
+                         'position': 'absolute',
+                         'top': '500px',
+                         'left': '600px'                     
+                        });
+    $('span:last').animate({ left:'250', top:'250'}, 7000, 'linear');
+  }
+
+  function redmove2(){
+    $('span:last').css('color','red');
+    $('span:last').fadeIn();
+    $('span:last').css({ 'font-size':'30px', 
+                         'position': 'absolute',
+                         'top': '500px',
+                         'left': '600px'                    
+                        });
+    $('span:last').animate({ left:'0', top:'120'}, 1000, 'linear');
+  }
+  function greenmove2(){
+    $('span:last').css('color','green');
+    $('span:last').css({ 'font-size':'30px', 
+                         'position': 'absolute',
+                         'top': '500px',
+                         'left': '0px'                    
+                        });
+    $('span:last').animate({ left:'0', top:'120'}, 3000);
+  }
+  function yellowmove2(){
+    $('span:last').css('color','yellow');
+    $('span:last').css({ 'font-size':'30px', 
+                         'position': 'absolute',
+                         'top': '120px',
+                         'left': '600px'                 
+                        });
+    $('span:last').animate({ left:'0', top:'120'}, 4000, 'linear');
+  }
+  function bluemove2(){
+    $('span:last').css('color','blue');
+    $('span:last').css({ 'font-size':'30px', 
+                         'position': 'absolute',
+                         'top': '120px',
+                         'left': '600px'                    
+                        });
+    $('span:last').animate({ left:'0', top:'120'}, 2000);
+    $('span:last').animate({ left:'600', top:'120'}, 1000);
+  }
+  function whitemove2(){
+    $('span:last').css({ 'color':'white','font-size':'30px', 
+                         'position': 'absolute',
+                         'top': '500px',
+                         'left': '0px'                    
+                        });
+    $('span:last').animate({ left:'0', top:'120'}, 1000, 'linear');
+    $('span:last').animate({ left:'0', top:'500'}, 3000, 'linear');
   }
   
 
@@ -118,11 +224,11 @@ $(function(){
       $('.video_top').css('position', 'relative');
       $('span:last').css({ 'color':'white','font-size':'30px', 
                            'position': 'absolute',
-                           'top': '70px',
+                           'top': '120px',
                            'left': '0px'                    
                         });
 
-      var number = 1 + Math.floor(Math.random() * 12);
+      var number = 1 + Math.floor(Math.random() * 23);
       console.log(number);
 
       $(function(){
@@ -139,6 +245,18 @@ $(function(){
             case number = 10 : yellowmove(); break;
             case number = 11 : bluemove(); break;
             case number = 12 : whitemove(); break;
+
+            case number = 13 : rightbottommove(); break;
+            case number = 14 : bottommove(); break;
+            case number = 15 : rightmove(); break;
+            case number = 16 : topreturnmove(); break;
+            case number = 17 : bottomreturnmove(); break;
+            case number = 18 : centermove(); break;
+            case number = 19 : redmove(); break;
+            case number = 20 : greenmove(); break;
+            case number = 21 : yellowmove(); break;
+            case number = 22 : bluemove(); break;
+            case number = 23 : whitemove(); break;
         }
       });
 
@@ -155,6 +273,19 @@ $(function(){
       // yellowmove();
       // bluemove();
       // whitemove();
+
+      // rightbottommove2();
+      // bottommove2();
+      // rightmove2();
+      // topreturnmove2();
+      // bottomreturnmove2();
+      // centermove2();
+
+      // redmove2();
+      // greenmove2();
+      // yellowmove2();
+      // bluemove2();
+      // whitemove2();
       
       $('span:last').fadeOut();
       scroll();
@@ -195,7 +326,7 @@ $(function(){
                            'left': '0px'                    
                         });
 
-          var number = 1 + Math.floor(Math.random() * 12);
+          var number = 1 + Math.floor(Math.random() * 23);
           console.log(number);
     
           $(function(){
@@ -212,8 +343,21 @@ $(function(){
                 case number = 10 : yellowmove(); break;
                 case number = 11 : bluemove(); break;
                 case number = 12 : whitemove(); break;
+
+                case number = 13 : rightbottommove(); break;
+                case number = 14 : bottommove(); break;
+                case number = 15 : rightmove(); break;
+                case number = 16 : topreturnmove(); break;
+                case number = 17 : bottomreturnmove(); break;
+                case number = 18 : centermove(); break;
+                case number = 19 : redmove(); break;
+                case number = 20 : greenmove(); break;
+                case number = 21 : yellowmove(); break;
+                case number = 22 : bluemove(); break;
+                case number = 23 : whitemove(); break;
             }
           });
+
           $('span:last').fadeOut();
 
         })

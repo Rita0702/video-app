@@ -12,6 +12,13 @@
     top: 100px;
     box-sizing: border-box;
 
+    .breadcrumbs{
+      padding:20px 20px;
+      font-size: 20px;
+      color: white;
+      text-decoration: none;
+    }
+
     .main-title{
       font-size: 30px;
       color: white;
@@ -32,8 +39,9 @@
         margin-bottom: 20px;
 
           .form{
+            background-color: #444444;
             padding: 20px 20px;
-            height: 200px;
+            height: 300px;
             .form-title{
               display: block;
               // width: 100px;
@@ -44,11 +52,18 @@
               // width: 100px;
               // height: 100px;
             }
+            
+            .file-icon{
+              // display: block;
+              display: inline-block;
+              font-size: 30px;
+            }
             .form-filefield{
-              display: block;
+              display: none;
               // width: 100px;
               // height: 100px;
             }
+            
             .form-submit{
               display: block;
               height: 30px;
@@ -63,9 +78,28 @@
             padding: 20px 20px;
             // background-color: $green;
             height: 720px;
+
+            .ranking{
+              color: white;
+              font-size: 30px;
+              padding: 20px 20px;
+              text-align: center;
+            }
             
             .good-content{
               .post-box{
+                .rank{
+                  color: white;
+                  font-size: 15px;
+                  padding-left: 20px;
+                }
+                .count{
+                  color: white;
+                  font-size: 15px;
+                  .icon-red{
+                    color: red;
+                  }
+                }
                 .post-top{
                   display: flex;
                   padding-top: 5px;
@@ -86,27 +120,6 @@
                     color: white;
                     font-size: 15px;
                     padding-left: 10px;
-                  }
-                  #love-post{
-                    display: flex;
-                    .good-button{
-                      .icon {
-                        color: white;
-                        font-size: 50px;
-                        padding-left: 20px;
-                      }
-                      .icon-red {
-                        color: red;
-                        font-size: 50px;
-                        padding-left: 20px;
-                      }
-                    }
-                    .good-count{
-                      color: $yellow;
-                      font-size: 15px;
-                      padding-left: 20px;
-                      display: inline;
-                    }
                   }
                 }
       
