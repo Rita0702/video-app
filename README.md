@@ -1,24 +1,24 @@
-# README
+## アプリケーション
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+video-app
 
-Things you may want to cover:
+## 概要
 
-* Ruby version
+動画を閲覧しながらユーザー間で会話ができるアプリケーション
 
-* System dependencies
+## 機能一覧
 
-* Configuration
+- ユーザーの新規会員登録、ログイン機能
+- 動画の視聴機能
+- 非同期通信によるコメント投稿機能
+- コメントの自動更新
+- 掲示板機能、画像選択時に画像のプレビュー機能
+- いいね機能、いいね数のランキング機能
 
-* Database creation
+## 技術一覧
 
-* Database initialization
+- ruby 2.5.1p57 (2018-03-29 revision 63029)
+- Rails 5.0.7
+- haml/scss/javascript/jquery
+- GitHubs/slack
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
