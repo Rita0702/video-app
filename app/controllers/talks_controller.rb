@@ -26,7 +26,6 @@ private
 
   def set_video
     @video = Video.find(params[:video_id])
-    # binding.pry
   end
 
 end
