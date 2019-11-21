@@ -17,7 +17,7 @@ video-app
 - コメントの自動更新
 - 掲示板機能、画像選択時に画像のプレビュー機能
 
-![Image preview](https://gyazo.com/20b42fc777f2583dab281ac436b78927/raw)
+<!-- ![Image preview](https://gyazo.com/20b42fc777f2583dab281ac436b78927/raw) -->
 
 - いいね機能、いいね数のランキング機能
 
