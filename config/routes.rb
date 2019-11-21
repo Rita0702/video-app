@@ -10,21 +10,16 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :videos, only: [:index, :show] do
+  resources :videos, only: [:index] do
     member do
       get 'image_for'
     end
   end
-
-  # resources :videos, only: [:index, :show] do
-  #   member do
-  #     get 'video_for'
-  #   end
-  # end
     
   resources :posts, only: [:index, :show, :create] do
     resource :loves, only: [:create, :destroy]
   end
+  
   # resources :posts, only: [:index, :show] do
   #   resources :comments, only: [:create]
   # end

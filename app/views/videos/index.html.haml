@@ -15,7 +15,5 @@
         %li.main-card__list
           - @videos.each do |video|
             = link_to image_tag(image_for_video_path(video.id), class: 'main-card__list--image'), video_talks_path(video.id)
-            -# .main-card__list--title
-            -#   = video.title
 
     = render 'footer'
