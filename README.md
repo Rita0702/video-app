@@ -13,6 +13,7 @@ video-app
 - 非同期通信によるコメント投稿機能
 
 [Comment posting](https://gyazo.com/12f5789e45c42fb8504b8f69065f1f5e)
+![comment_posting](https://user-images.githubusercontent.com/52993581/69478390-2a107a80-0e35-11ea-9969-1c83acf945f7.gif)
 
 - コメントの自動更新
 - 掲示板機能、画像選択時に画像のプレビュー機能
