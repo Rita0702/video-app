@@ -1,57 +1,73 @@
-$(function(){
-  $('.form').on('change', 'input[type="file"]', function(e) {
-    var file = e.target.files[0],
-        reader = new FileReader(),
-        previewArea = $('.preview');
+$(function () {
+  $('.form-filefield-image').on('change', function (e) {
+    var file = e.target.files[0];
+    var reader = new FileReader();
+    previewAreaImage = $('.preview-image');
 
-    // if(file.type.indexOf("image") < 0){
-    //   return false;
-    // }
-    reader.onload = (function() {
-      return function(e) {
-        previewArea.empty();
-        previewArea.append($('<img>').attr({
-                  src: e.target.result,
-                  width: "150px",
-                  class: "preview",
-              }));
-      };
-    })
-    (file);
+    reader.onload = (function (e) {
+      previewAreaImage.empty();
+      previewAreaImage.append($('<img>').attr({
+        src: e.target.result,
+        width: "150px",
+        class: "preview",
+      }));
+    });
     reader.readAsDataURL(file);
   });
-  
+
+
+  $('.form-filefield-video').on('change', function (e) {
+    var file = e.target.files[0];
+    var reader = new FileReader();
+    previewAreaVideo = $('.preview-video');
+
+    reader.onload = (function (e) {
+      previewAreaVideo.empty();
+      previewAreaVideo.append($('<video>').attr({
+        src: e.target.result,
+        width: "50%",
+        height: "150px",
+        class: "preview-video",
+        autoplay: "autoplay",
+        muted: "true",
+        loop: "loop",
+        playsinline: "true"
+      }));
+    })
+    reader.readAsDataURL(file);
+  })
 });
 
-$(function(){
-  function buildHTML(post){
+$(function () {
+  function buildHTML(post) {
     var text = post.text ? `<div class='post-text'>${post.text}</div>` : ``;
     var image = post.image.url ? `<img src='${post.image.url}' class='post-image'>` : ``;
+    var video = post.video.url ? `<video src='${post.video.url}' controls='true' autoplay='ture' muted='true' class='post-video'>` : ``;
     var html = `<div class='post-box'>
-                  <div class='post-top'>
-                    <div class='post-user'>${post.user_name}</div>
-                    <div class='post-title'>${post.title}</div>
-                    <div class='post-date'>${post.date}</div>
-                  </div>
-                  <div class='post-bottom'>
-                    ${ text }
-                    ${ image }
-                  </div>
-                </div>`
+                    <div class='post-top'>
+                      <div class='post-user'>${post.user_name}</div>
+                      <div class='post-title'>${post.title}</div>
+                      <div class='post-date'>${post.date}</div>
+                    </div>
+                    <div class='post-bottom'>
+                      ${ text}
+                      ${ image}
+                      ${ video}
+                    </div>
+                  </div>`
     return html;
   }
 
-  function scroll(){
-    $('.main-right').animate({scrollTop: $('.main-right')[0].scrollHeight });
+  function scroll() {
+    $('.main-right').animate({ scrollTop: $('.main-right')[0].scrollHeight });
   }
-  
-  $('#new_post').on('submit',function(e){
+
+  $('#new_post').on('submit', function (e) {
     e.preventDefault();
     var post = new FormData(this);
     var url = $(this).attr('action');
 
     $.ajax({
-      // url: '/posts',
       url: url,
       type: 'POST',
       data: post,
@@ -59,75 +75,20 @@ $(function(){
       processData: false,
       contentType: false
     })
-    .done(function(data){
-      var html = buildHTML(data);
-      $('.posts-content').append(html);
-      scroll();
-      $('.form-submit').prop('disabled', false);
-      $('#new_post')[0].reset();
-    })
-    .fail(function(){
-      alert('送信エラー');
-      $('.form-submit').prop('disabled', false);
-    })
+      .done(function (data) {
+        var html = buildHTML(data);
+        $('.posts-content').append(html);
+        scroll();
+        $('.form-submit').prop('disabled', false);
+        $('#new_post')[0].reset();
+        $('.preview-image').remove();
+        $('.preview-video').remove();
+      })
+      .fail(function () {
+        alert('送信エラーです');
+        $('.form-submit').prop('disabled', false);
+        $('.preview-image').remove();
+        $('.preview-video').remove();
+      })
   })
 });
-
-// $(function(){
-//   function buildHTML(post){
-//     var text = post.text ? `<div class='post-text'>${post.text}</div>` : ``;
-//     var image = post.image.url ? `<img src='${post.image.url}' class='post-image'>` : ``;
-//     var html = `<div class='post-box'>
-//                   <div class='post-top'>
-//                     <div class='post-user'>${post.user_name}</div>
-//                     <div class='post-title'>${post.title}</div>
-//                     <div class='post-date'>${post.date}</div>
-//                   </div>
-//                   <div class='post-bottom'>
-//                     ${ text }
-//                     ${ image }
-//                   </div>
-//                 </div>`
-//     return html;
-//   }
-
-//   function scroll(){
-//     $('.main-right').animate({scrollTop: $('.main-right')[0].scrollHeight });
-//   }
-
-//     Dropzone.autoDiscover = false;
-//     $(".dropzone").dropzone({
-//       acceptedFiles: '.jpeg,.jpg,.png',
-//       maxFilesize: 5, //In MB
-//       maxFiles: 5,
-//       addRemoveLinks: true,
-//       raddedfilefile: function (file) {
-//       if (file.xhr.responseText.length > 0) {
-//           // var fileId = JSON.parse(file.xhr.responseText).id;
-//           var post = new FormData(this);
-//           var url = $(this).attr('action');
-
-//           $.ajax({
-//             // url: '/posts',
-//             url: url,
-//             type: 'POST',
-//             data: post,
-//             dataType: 'json',
-//             processData: false,
-//             contentType: false
-//           })
-//           .done(function(data){
-//             var html = buildHTML(data);
-//             $('.posts-content').append(html);
-//             scroll();
-//             $('.form-submit').prop('disabled', false);
-//             $('#new_post')[0].reset();
-//           })
-//           .fail(function(){
-//             alert('送信エラー');
-//             $('.form-submit').prop('disabled', false);
-//           })
-//         }
-//       }
-//   });
-// });  

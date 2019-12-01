@@ -9,6 +9,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
+    # if post_params[:video].nil?
     if @post.save
       respond_to do |format|
         format.html { redirect_to posts_path }
@@ -18,11 +19,15 @@ class PostsController < ApplicationController
       @posts = @post.includes(:user)
       render :index
     end
+    # else
+    #   @post.save!
+    #   render :index
+    # end
   end
 
 private
   def post_params
-    params.require(:post).permit(:title, :text, :image).merge(user_id: current_user.id)
+    params.require(:post).permit(:title, :text, :image, :video).merge(user_id: current_user.id)
   end
 
   def ranking
