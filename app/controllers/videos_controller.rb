@@ -2,7 +2,7 @@ class VideosController < ApplicationController
 
   def index
     @video = Video.find(1)
-    @videos = Video.all
+    @videos = Video.all.where.not(id: 1)
     # @videos = Video.order("id ASC").limit(5)
   end
 
