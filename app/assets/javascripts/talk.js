@@ -18,21 +18,21 @@ $(function () {
   }
 
   function rightbottommove() {
-    $('span:last').animate({ left: '600', top: '500' }, 1000, 'linear');
+    $('span:last').animate({ left: '600', top: '650' }, 1000, 'linear');
   }
   function bottommove() {
-    $('span:last').animate({ left: '0', top: '500' }, 3000);
+    $('span:last').animate({ left: '0', top: '650' }, 3000);
   }
   function rightmove() {
-    $('span:last').animate({ left: '600', top: '150' }, 4000, 'linear');
+    $('span:last').animate({ left: '600', top: '180' }, 4000, 'linear');
   }
   function topreturnmove() {
-    $('span:last').animate({ left: '600', top: '150' }, 2000);
-    $('span:last').animate({ left: '0', top: '150' }, 1000);
+    $('span:last').animate({ left: '600', top: '180' }, 2000);
+    $('span:last').animate({ left: '0', top: '180' }, 1000);
   }
   function bottomreturnmove() {
-    $('span:last').animate({ left: '0', top: '500' }, 1000, 'linear');
-    $('span:last').animate({ left: '0', top: '150' }, 3000, 'linear');
+    $('span:last').animate({ left: '0', top: '650' }, 1000, 'linear');
+    $('span:last').animate({ left: '0', top: '180' }, 3000, 'linear');
   }
   function centermove() {
     $('span:last').animate({ left: '300', top: '250' }, 7000, 'linear');
@@ -42,21 +42,21 @@ $(function () {
   function redmove() {
     $('span:last').css('color', 'red');
     $('span:last').css('font-size', '50px');
-    $('span:last').animate({ left: '600', top: '500' }, 2000, 'linear');
+    $('span:last').animate({ left: '600', top: '650' }, 2000, 'linear');
   }
   function greenmove() {
     $('span:last').css('color', 'green');
-    $('span:last').animate({ left: '0', top: '500' }, 1000, 'linear');
-    $('span:last').animate({ left: '0', top: '150' }, 3000, 'linear');
+    $('span:last').animate({ left: '0', top: '650' }, 1000, 'linear');
+    $('span:last').animate({ left: '0', top: '180' }, 3000, 'linear');
   }
   function yellowmove() {
     $('span:last').css('color', 'yellow');
-    $('span:last').animate({ left: '600', top: '150' }, 2000);
-    $('span:last').animate({ left: '0', top: '150' }, 1000);
+    $('span:last').animate({ left: '600', top: '180' }, 2000);
+    $('span:last').animate({ left: '0', top: '180' }, 1000);
   }
   function bluemove() {
     $('span:last').css('color', 'blue');
-    $('span:last').animate({ left: '600', top: '500' }, 1000, 'linear');
+    $('span:last').animate({ left: '600', top: '650' }, 1000, 'linear');
   }
   function whitemove() {
     $('span:last').css('color', 'white');
@@ -72,7 +72,7 @@ $(function () {
       'top': '500px',
       'left': '600px'
     });
-    $('span:last').animate({ left: '0', top: '150' }, 1000, 'linear');
+    $('span:last').animate({ left: '0', top: '180' }, 1000, 'linear');
   }
   function bottommove2() {
 
@@ -82,46 +82,46 @@ $(function () {
       'top': '500px',
       'left': '0px'
     });
-    $('span:last').animate({ left: '0', top: '150' }, 3000);
+    $('span:last').animate({ left: '0', top: '180' }, 3000);
   }
   function rightmove2() {
 
     $('span:last').css({
       'color': 'white', 'font-size': '30px',
       'position': 'absolute',
-      'top': '150px',
+      'top': '180px',
       'left': '600px'
     });
-    $('span:last').animate({ left: '0', top: '150' }, 4000, 'linear');
+    $('span:last').animate({ left: '0', top: '180' }, 4000, 'linear');
   }
   function topreturnmove2() {
 
     $('span:last').css({
       'color': 'white', 'font-size': '30px',
       'position': 'absolute',
-      'top': '150px',
+      'top': '180px',
       'left': '600px'
     });
-    $('span:last').animate({ left: '0', top: '150' }, 2000);
-    $('span:last').animate({ left: '600', top: '150' }, 1000);
+    $('span:last').animate({ left: '0', top: '180' }, 2000);
+    $('span:last').animate({ left: '600', top: '180' }, 1000);
   }
   function bottomreturnmove2() {
 
     $('span:last').css({
       'color': 'white', 'font-size': '30px',
       'position': 'absolute',
-      'top': '500px',
+      'top': '650px',
       'left': '0px'
     });
-    $('span:last').animate({ left: '0', top: '150' }, 1000, 'linear');
-    $('span:last').animate({ left: '0', top: '500' }, 3000, 'linear');
+    $('span:last').animate({ left: '0', top: '180' }, 1000, 'linear');
+    $('span:last').animate({ left: '0', top: '650' }, 3000, 'linear');
   }
   function centermove2() {
     $('span:last').fadeIn();
     $('span:last').css({
       'color': 'white', 'font-size': '30px',
       'position': 'absolute',
-      'top': '500px',
+      'top': '650px',
       'left': '600px'
     });
     $('span:last').animate({ left: '250', top: '250' }, 7000, 'linear');
@@ -133,51 +133,51 @@ $(function () {
     $('span:last').css({
       'font-size': '30px',
       'position': 'absolute',
-      'top': '500px',
+      'top': '650px',
       'left': '600px'
     });
-    $('span:last').animate({ left: '0', top: '150' }, 1000, 'linear');
+    $('span:last').animate({ left: '0', top: '180' }, 1000, 'linear');
   }
   function greenmove2() {
     $('span:last').css('color', 'green');
     $('span:last').css({
       'font-size': '30px',
       'position': 'absolute',
-      'top': '500px',
+      'top': '650px',
       'left': '0px'
     });
-    $('span:last').animate({ left: '0', top: '150' }, 3000);
+    $('span:last').animate({ left: '0', top: '180' }, 3000);
   }
   function yellowmove2() {
     $('span:last').css('color', 'yellow');
     $('span:last').css({
       'font-size': '30px',
       'position': 'absolute',
-      'top': '150px',
+      'top': '180px',
       'left': '600px'
     });
-    $('span:last').animate({ left: '0', top: '150' }, 4000, 'linear');
+    $('span:last').animate({ left: '0', top: '180' }, 4000, 'linear');
   }
   function bluemove2() {
     $('span:last').css('color', 'blue');
     $('span:last').css({
       'font-size': '30px',
       'position': 'absolute',
-      'top': '150px',
+      'top': '180px',
       'left': '600px'
     });
-    $('span:last').animate({ left: '0', top: '150' }, 2000);
-    $('span:last').animate({ left: '600', top: '150' }, 1000);
+    $('span:last').animate({ left: '0', top: '180' }, 2000);
+    $('span:last').animate({ left: '600', top: '180' }, 1000);
   }
   function whitemove2() {
     $('span:last').css({
       'color': 'white', 'font-size': '30px',
       'position': 'absolute',
-      'top': '500px',
+      'top': '650px',
       'left': '0px'
     });
-    $('span:last').animate({ left: '0', top: '150' }, 1000, 'linear');
-    $('span:last').animate({ left: '0', top: '500' }, 3000, 'linear');
+    $('span:last').animate({ left: '0', top: '180' }, 1000, 'linear');
+    $('span:last').animate({ left: '0', top: '650' }, 3000, 'linear');
   }
 
 
@@ -232,11 +232,11 @@ $(function () {
         var comment = rollcomment(data);
         $('.comments').append(comment);
 
-        $('.video_top').css('position', 'relative');
+        $('.video_view').css('position', 'relative');
         $('span:last').css({
           'color': 'white', 'font-size': '30px',
           'position': 'absolute',
-          'top': '150px',
+          'top': '180px',
           'left': '0px'
         });
 
@@ -304,11 +304,11 @@ $(function () {
             insertHTML += rollcomment(talk);
             $('.comments').append(insertHTML);
 
-            $('.video_top').css('position', 'relative');
+            $('.video-view').css('position', 'relative');
             $('span:last').css({
               'color': 'white', 'font-size': '30px',
               'position': 'absolute',
-              'top': '150px',
+              'top': '180px',
               'left': '0px'
             });
 
