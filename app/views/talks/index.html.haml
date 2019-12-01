@@ -1,11 +1,13 @@
-.show-page
-  = render '/videos/header'
+= render '/videos/header'
+- breadcrumb :talk
+= render "layouts/breadcrumbs"
 
+.show-page
   .main
-    .breadcrumbs
-      = link_to 'TopPage', root_path
-      >>
-      = link_to 'view&talk', video_talks_path(@video)
+    -# .breadcrumbs
+    -#   = link_to 'TopPage', root_path
+    -#   >>
+    -#   = link_to 'view&talk', video_talks_path(@video)
     .main-title
       = @video.title
 
@@ -25,7 +27,7 @@
           = video_tag 'eureka.mp4', type: "videos/mp4", controls: true, autoplay: false, muted: true, class: 'video-view'
         - elsif @video.id == 7
           = video_tag 'fatest2.mp4', type: "videos/mp4", controls: true, autoplay: false, muted: true, class: 'video-view'
-        
+  
       .main-comments
         .form
           = form_for [@video, @talk] do |f|
@@ -41,4 +43,4 @@
                 .comment__text
                   = talk.comment
 
-    = render 'videos/footer'
+= render 'videos/footer'

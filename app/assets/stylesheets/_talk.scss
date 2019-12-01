@@ -1,57 +1,44 @@
 .show-page{
-  background-color: #222222;
-  height: 100vh;
-  width: 100vw;
-  position: relative;
-  box-sizing: border-box;
-
+  background-color: $black2;
   .main{
-    background-color: #222222;
     overflow: scroll;
-    position: absolute;
-    top: 120px;
     box-sizing: border-box;
-
-    .breadcrumbs{
-      padding:20px 20px;
-      font-size: 20px;
-      color: white;
-      text-decoration: none;
-    }
-
+    padding: 20px;
+    // .breadcrumbs{
+    //   padding:20px 20px;
+    //   font-size: 20px;
+    //   color: white;
+    //   text-decoration: none;
+    // }
     .main-title{
       font-size: 20px;
+      font-weight: 700;
       color: white;
       padding-left: 30px;
-      padding-bottom: 20px;
-      
+      padding-bottom: 20px;  
     }
 
     .main-top{
       display: flex;
-
       .main-video{
         height: 500px;
         width: 700px;
         margin: 0 20px;
         margin-bottom: 20px;
-
-          .video-view{
-            height: 500px;
-            width: 700px;
-          }
+        .video-view{
+          height: 500px;
+          width: 700px;
+        }
       }
 
       .main-comments{
         height: 600px;
         width: 500px;
         margin: 0 20px;
-        background-color: #444444;
+        background-color: $black4;
         margin-bottom: 20px;
-
         form {
           display: flex;
-
           .form-textarea{
             height: 30px;
             width: 85%;
@@ -65,19 +52,15 @@
             border-radius: 10px;
           }
         }
-
         .comment-area{
           height: calc(100% - 30px);
           width: 100%;
           overflow: scroll;
-
           .comments{
-            padding-bottom:10px;
             padding-left: 20px;
-
             .comment{
               display: flex;
-
+              margin: 2px 0;
               &__name{
                 padding-right: 10px;
                 color: white;
@@ -91,23 +74,6 @@
           } 
         }
       }
-    
-      // .main-icon-list{
-      //   display: flex;
-      //   padding: 0 20px 0 20px;
-      //   margin-bottom: 30px;
-
-      //   .icon{
-      //     color: white;
-      //     font-size: 50px;
-      //     padding-top: 30px;
-      //     padding-left: 30px;
-      //   }
-      //   i {
-      //     color: white;
-      //   }
-      // }
-
     }
   }
 }

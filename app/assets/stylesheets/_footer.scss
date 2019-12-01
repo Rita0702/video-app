@@ -1,24 +1,19 @@
 .footer{
   height: 100px;
   width: 100vw;
-  background-color: #111111;
-
+  background-color: $black;
+  box-sizing: border-box;
   .footer-list{
     display: flex;
-    line-height: 100px;
-    padding: 0 20px 0 20px;
-
-      .text{
-        color: white;
-        padding-right: 30px;
-      }
-  } 
-
+    justify-content: center;
+    padding: 20px;
+    .text{
+      color: white;
+      padding-right: 30px;
+    }
+  }
   .footer-last{
-    background-color: #111111;
-    height: 50px;
     color: white;
     text-align: center;
-    line-height: 50px; 
   }
 }
