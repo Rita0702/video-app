@@ -4,3 +4,4 @@ json.date Time.now.strftime("%Y/%m/%d %H:%M")
 json.title @post.title
 json.text @post.text
 json.image @post.image
+json.video @post.video
