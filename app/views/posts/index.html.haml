@@ -16,11 +16,16 @@
           = form_for [@post] do |f|
             = f.text_field :title, placeholder: 'type a title', class: 'form-title'
             = f.text_area :text, placeholder: 'type a commment', class: 'form-textarea'
-            = f.label :image, class: 'file-icon' do
-              = fa_icon 'image'
-              = f.file_field :image, class: 'form-filefield'
-            .preview
+            = f.label :image, class: 'image_label' do
+              -# = fa_icon 'image'
+              = f.file_field :image, class: 'form-filefield-image', id: 'image'
+            = f.label :video, class: 'video_label', for: 'video', id: 'video' do
+              -# = fa_icon 'image'
+              = f.file_field :video, class: 'form-filefield-video', id: 'video'
+            .preview-image
+            .preview-video
             = f.submit 'send', class: 'form-submit'
+
 
         .good-ranking
           .ranking
@@ -50,7 +55,7 @@
                     .post-image
                       = image_tag post.image.url
 
-      .main-right
+      .main-right#bottom-scroll
         .posts-content
           - @posts.each do |post|
             .post-box
@@ -70,5 +75,9 @@
                 - if post.image.present?
                   .post-image
                     = image_tag post.image.url
+                - if post.video.present?
+                  .post-video
+                    = video_tag post.video_url.to_s, controls: true, autoplay: false, muted: true, class: "post-video"
+                    -# = video_tag post.video_url.to_s, loop: true, autoplay: true, muted: true, controls: true, class: "post-video"
 
     = render 'videos/footer'
