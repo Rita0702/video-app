@@ -1,34 +1,43 @@
 .header{
   height: 100px;
   width: 100vw;
-  background-color: #111111;
-  position: fixed;
-  z-index: 2;
+  background-color: $black;
+  // position: fixed;
+  // z-index: 2;
   box-sizing: border-box;
-
-
   .header-list{
     display: flex;
-    line-height: 100px;
     padding: 0 20px 0 20px;
-    
     .title{
-      color: white;
       font-size: 50px;
+      font-weight: 700;
+      line-height: 100px;
       padding-right: 30px;
-      text-decoration: none;
+      .title-link{
+        text-decoration: none;
+        color: white;
+      }
     }
-    .icon {
-      color: white;
-      font-size: 50px;
-      padding-top: 30px;
-      padding-left: 30px;
-    }
-    .icon-red {
-      color: red;
-      font-size: 50px;
-      padding-top: 30px;
-      padding-left: 30px;
+    .list-one{
+      padding-right: 30px; 
+      .link-block{
+        display: block;
+        text-decoration: none;
+        .icon {
+          color: white;
+          font-size: 50px;
+          padding-top: 10px;
+          padding-left: 10px;
+          &:hover{
+            color: $yellow;
+          }
+        }
+        .link-text{
+          color: white;
+          padding-top: 5px;
+          padding-left: 10px;
+        }
+      }
     }
   }
 }
