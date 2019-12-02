@@ -22,3 +22,7 @@
         = fa_icon 'cog', class: 'icon'
         .link-text
           LogOut
+    - if user_signed_in?
+      %li.list-one
+        .user-name
+          = "user name: #{current_user.name}"
