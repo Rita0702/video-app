@@ -3,7 +3,7 @@ crumb :root do
 end
 
 crumb :talk do
-  link "view&talk", video_talks_path
+  link 'view&talk', video_talks_path
   parent :root
 end
 
