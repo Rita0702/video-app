@@ -1,31 +1,37 @@
-.post-page
-  = render '/videos/header'
+= render '/videos/header'
+- breadcrumb :post
+= render "layouts/breadcrumbs"
 
+.post-page
   .main
     .breadcrumbs
-      = link_to 'TopPage', root_path
-      >>
-      = link_to 'post', posts_path
-
+      -# = link_to 'TopPage', root_path
+      -# >>
+      -# = link_to 'post', posts_path
     .main-title
-      ゴミ捨て場
+      コミュニティスペース
     
     .main-top
       .main-left
+        .form-title
+          投稿してみませんか？
         .form
           = form_for [@post] do |f|
-            = f.text_field :title, placeholder: 'type a title', class: 'form-title'
-            = f.text_area :text, placeholder: 'type a commment', class: 'form-textarea'
+            = f.text_field :title, placeholder: 'タイトルを入力して type a title', class: 'form-text'
+            = f.text_area :text, placeholder: 'コメントを入力して type a commment', class: 'form-textarea'
+            .image-text
+              画像はこちらから
             = f.label :image, class: 'image_label' do
               -# = fa_icon 'image'
               = f.file_field :image, class: 'form-filefield-image', id: 'image'
+            .video-text
+              動画はこちらから
             = f.label :video, class: 'video_label', for: 'video', id: 'video' do
               -# = fa_icon 'image'
               = f.file_field :video, class: 'form-filefield-video', id: 'video'
             .preview-image
             .preview-video
             = f.submit 'send', class: 'form-submit'
-
 
         .good-ranking
           .ranking
@@ -34,12 +40,11 @@
             -@love_count_post.each.with_index do |post, i|
               .post-box
                 .rank
-                  = i+1
-                  位
+                  = "#{ i+1 }位 "
                 .count
-                  いいね
+                  みんなのいいね件数
                   = fa_icon 'heart', class: 'icon-red'
-                  = @love_count[i]
+                  = "#{@love_count[i]}件"
                 .post-top
                   .post-user
                     = post.user.name
@@ -51,9 +56,13 @@
                   - if post.text.present?
                     .post-text
                       = post.text
-                  - if post.image.present?
-                    .post-image
-                      = image_tag post.image.url
+                    .post-flex
+                      - if post.image.present?
+                        .post-image
+                          = image_tag post.image.url
+                      - if post.video.present?
+                        .post-video
+                          = video_tag post.video.url.to_s, controls: true, autoplay: false, muted: true, class: "post-video"
 
       .main-right#bottom-scroll
         .posts-content
@@ -72,12 +81,12 @@
                 - if post.text.present?
                   .post-text
                     = post.text
-                - if post.image.present?
-                  .post-image
-                    = image_tag post.image.url
-                - if post.video.present?
-                  .post-video
-                    = video_tag post.video_url.to_s, controls: true, autoplay: false, muted: true, class: "post-video"
-                    -# = video_tag post.video_url.to_s, loop: true, autoplay: true, muted: true, controls: true, class: "post-video"
+                  .post-flex
+                    - if post.image.present?
+                      .post-image
+                        = image_tag post.image.url
+                    - if post.video.present?
+                      .post-video
+                        = video_tag post.video_url.to_s, controls: true, autoplay: false, muted: true, class: "post-video"
 
-    = render 'videos/footer'
+= render 'videos/footer'
