@@ -8,7 +8,7 @@ $(function () {
       previewAreaImage.empty();
       previewAreaImage.append($('<img>').attr({
         src: e.target.result,
-        width: "150px",
+        width: "300px",
         class: "preview",
       }));
     });
@@ -25,8 +25,8 @@ $(function () {
       previewAreaVideo.empty();
       previewAreaVideo.append($('<video>').attr({
         src: e.target.result,
-        width: "50%",
-        height: "150px",
+        width: "300px",
+        height: "200px",
         class: "preview-video",
         autoplay: "autoplay",
         muted: "true",
@@ -51,8 +51,10 @@ $(function () {
                     </div>
                     <div class='post-bottom'>
                       ${ text}
-                      ${ image}
-                      ${ video}
+                      <div class='post-flex'>
+                        ${ image}
+                        ${ video}
+                      </div>
                     </div>
                   </div>`
     return html;
